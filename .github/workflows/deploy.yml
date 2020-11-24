@@ -36,7 +36,7 @@ jobs:
       - run: APP_ENV=${{ env.APP_ENV }} yarn build:prod
 
       # upload to aliyun
-      - uses: yizhoumo/setup-ossutil@v1
+      - uses: manyuanrong/setup-ossutil@v2.0
         with:
           endpoint: ${{ env.OSS_ENDPOINT }}
           access-key-id: ${{ secrets.GLOBAL_OSS_ACCESS_KEY_ID }}
